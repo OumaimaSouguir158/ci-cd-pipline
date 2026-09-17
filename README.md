@@ -1,6 +1,5 @@
-# 🟡 Projet 5 — Pipeline de tests automatisés et intégration continue
+## Projet 5 — Pipeline de tests automatisés et intégration continue
 
-> **Statut** : À construire | **Niveau** : Intermédiaire | **Durée** : 3-4 semaines
 
 ## Objectif
 Mettre en place une suite de tests automatisés et un pipeline CI/CD complet sur une API.
