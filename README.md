@@ -1,12 +1,12 @@
-## Projet 5 — Pipeline de tests automatisés et intégration continue
+## Project 5 — Automated testing pipeline and continuous integration
 
 
-## Objectif
-Mettre en place une suite de tests automatisés et un pipeline CI/CD complet sur une API.
+## Objective
+To set up an automated test suite and a complete CI/CD pipeline for an API.
 
-## Pipeline CI/CD (GitHub Actions)
+## CI/CD pipeline (GitHub Actions)
 ```
-Push sur main/feature/*
+Push to main/feature/*
         │
         ▼
   ┌─────────────────────────────────────────────────────────────┐
@@ -18,25 +18,25 @@ Push sur main/feature/*
   └─────────────────────────────────────────────────────────────┘
 ```
 
-## Couverture de tests
-- **Tests unitaires** : logique métier isolée (mocks)
-- **Tests d'intégration** : API + base de données en conditions réelles
-- **Tests end-to-end** : (bonus) Playwright/Cypress
+## Test coverage
+- **Unit tests**: isolated business logic (mocks)
+- **Integration tests**: API + database under real-world conditions
+- **End-to-end tests**: (bonus) Playwright/Cypress
 
-## Démarrage local
+## Running locally
 ```bash
 npm install
-npm test              # Tests unitaires + intégration
-npm run test:coverage # Rapport de couverture
+npm test              # Unit and integration tests
+npm run test:coverage # Coverage report
 npm run lint
 ```
 
-## Question d'entretien
-> **Comment votre pipeline garantit-il qu'un déploiement défectueux n'atteint pas la production ?**
+## Interview question
+> **How does your pipeline ensure that a faulty deployment does not reach production?**
 >
-> Les jobs sont chainés : `lint → test → build → deploy`. Si une étape échoue,
-> les suivantes ne s'exécutent pas. De plus, le déploiement n'est déclenché que
-> sur la branche `main`, après un merge request validé.
+> The jobs are chained: `lint → test → build → deploy`. If a step fails,
+> the subsequent steps do not run. Furthermore, deployment is only triggered
+> on the `main` branch, following an approved merge request.
 
-## Ligne CV
-> « Pipeline CI/CD — tests automatisés Jest, intégration continue GitHub Actions, build Docker reproductible. »
+## CV entry
+> “CI/CD pipeline — automated Jest tests, GitHub Actions continuous integration, reproducible Docker builds.”
